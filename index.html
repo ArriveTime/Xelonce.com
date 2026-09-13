@@ -56,11 +56,11 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            padding: 20px 8%;
+            padding: 18px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(7, 7, 8, 0.85);
+            background: rgba(7, 7, 8, 0.9);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-gold);
         }
@@ -93,55 +93,24 @@
             color: var(--gold-primary);
         }
 
-        .btn-gold {
+        .btn-call-nav {
             background: var(--gold-gradient);
             color: #000;
             font-family: var(--font-body);
-            font-weight: 600;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            padding: 12px 26px;
-            border: none;
-            border-radius: 2px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            padding: 10px 20px;
+            border-radius: 3px;
             text-decoration: none;
             display: inline-block;
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--silver-primary);
-            border: 1px solid var(--border-silver);
-            font-family: var(--font-body);
-            font-weight: 500;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            padding: 12px 26px;
-            border-radius: 2px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-outline:hover {
-            border-color: var(--gold-primary);
-            color: var(--gold-primary);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
         }
 
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            padding: 160px 8% 100px;
+            padding: 150px 8% 80px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -154,18 +123,17 @@
             font-size: 3.8rem;
             font-weight: 800;
             letter-spacing: 6px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             text-transform: uppercase;
         }
 
-        /* Clear, Readable Regular Subtitles */
         .subtitles-container {
             font-family: var(--font-body);
             font-size: 1.15rem;
             font-weight: 600;
             letter-spacing: 3px;
             line-height: 1.8;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             text-transform: uppercase;
         }
 
@@ -180,16 +148,76 @@
             max-width: 750px;
             font-size: 1.05rem;
             color: var(--silver-muted);
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             font-weight: 300;
             letter-spacing: 0.5px;
         }
 
-        .hero-buttons {
+        /* HIGH VISIBILITY PHONE & ACTION BOX */
+        .phone-callout-box {
+            background: rgba(15, 15, 19, 0.9);
+            border: 2px solid var(--gold-primary);
+            padding: 30px 40px;
+            border-radius: 6px;
+            margin-bottom: 40px;
+            max-width: 650px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .phone-number-display {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .action-buttons-grid {
             display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
+            gap: 15px;
             justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-action-gold {
+            background: var(--gold-gradient);
+            color: #000;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 14px 28px;
+            border-radius: 3px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-action-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-action-silver {
+            background: transparent;
+            color: var(--silver-primary);
+            border: 1px solid var(--border-silver);
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 14px 28px;
+            border-radius: 3px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-action-silver:hover {
+            border-color: var(--gold-primary);
+            color: var(--gold-primary);
         }
 
         /* Value Grid */
@@ -199,7 +227,7 @@
             gap: 20px;
             width: 100%;
             max-width: 1100px;
-            margin-top: 60px;
+            margin-top: 20px;
         }
 
         .value-card {
@@ -207,12 +235,6 @@
             border: 1px solid var(--border-silver);
             padding: 25px 20px;
             border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        .value-card:hover {
-            border-color: var(--gold-primary);
-            transform: translateY(-4px);
         }
 
         .value-title {
@@ -410,7 +432,7 @@
 
         .form-container {
             max-width: 650px;
-            margin: 40px auto 0;
+            margin: 30px auto 0;
             display: grid;
             gap: 20px;
         }
@@ -425,7 +447,6 @@
             font-size: 0.9rem;
             border-radius: 2px;
             outline: none;
-            transition: border 0.3s;
         }
 
         .form-input:focus, .form-textarea:focus {
@@ -435,21 +456,6 @@
         .form-textarea {
             height: 140px;
             resize: vertical;
-        }
-
-        .direct-email-link {
-            color: var(--gold-primary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-top: 15px;
-            transition: color 0.3s;
-        }
-
-        .direct-email-link:hover {
-            color: var(--gold-light);
-            text-decoration: underline;
         }
 
         /* Footer */
@@ -468,6 +474,7 @@
 
         @media (max-width: 768px) {
             .hero-title { font-size: 2.4rem; }
+            .phone-number-display { font-size: 1.5rem; }
             .subtitles-container { font-size: 0.95rem; }
             .service-display { grid-template-columns: 1fr; }
             .nav-links { display: none; }
@@ -476,7 +483,7 @@
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <nav>
         <a href="#" class="logo gold-text">XELONCE.COM</a>
         <ul class="nav-links">
@@ -484,14 +491,13 @@
             <li><a href="#estimator">Scope Calculator</a></li>
             <li><a href="#contact">Consultation</a></li>
         </ul>
-        <a href="#contact" class="btn-gold">Initiate Briefing</a>
+        <a href="tel:4802692272" class="btn-call-nav">CALL: (480) 269-2272</a>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Main Hero Section -->
     <section class="hero">
         <h1 class="hero-title gold-text">XELONCE.COM</h1>
         
-        <!-- Clean, Regular Text Subtitles (3 Separate Lines) -->
         <div class="subtitles-container">
             <span>ELITE MARKETING.</span>
             <span>UNFORGETTABLE EVENTS.</span>
@@ -502,9 +508,16 @@
             Planning & Hosting World Class Events while engineering tailored public relations and high-velocity marketing campaigns for ambitious brands and distinguished leadership.
         </p>
 
-        <div class="hero-buttons">
-            <a href="#contact" class="btn-gold">Request Engagement</a>
-            <a href="#estimator" class="btn-outline">Build Event / PR Scope</a>
+        <!-- LARGE DEDICATED PHONE & DIRECT CONTACT BOX -->
+        <div class="phone-callout-box">
+            <span style="font-size:0.85rem; color:var(--silver-muted); text-transform:uppercase; letter-spacing:2px; display:block; margin-bottom:5px;">Direct Line & Contact</span>
+            <span class="phone-number-display gold-text">(480) 269-2272</span>
+            
+            <div class="action-buttons-grid">
+                <a href="tel:4802692272" class="btn-action-gold">Call Now</a>
+                <a href="sms:4802692272" class="btn-action-silver">Text Us</a>
+                <a href="mailto:All4aim@hotmail.com?subject=XELONCE.COM%20Inquiry" class="btn-action-silver">Email Direct</a>
+            </div>
         </div>
 
         <!-- Value Grid -->
@@ -577,16 +590,28 @@
                     <div style="font-size:0.8rem; color:var(--silver-muted); text-transform:uppercase; letter-spacing:1px;">Recommended Tier</div>
                     <div class="tier-display" id="tier-result">Bespoke Executive Engagement</div>
                 </div>
-                <a href="#contact" class="btn-gold">Lock In Briefing</a>
+                <a href="tel:4802692272" class="btn-action-gold">Call (480) 269-2272</a>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Direct Email Section -->
+    <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="section-header">
             <div class="section-subtitle">Private Consultation</div>
             <h2 class="section-title gold-text">INITIATE A BRIEFING</h2>
+        </div>
+
+        <!-- Direct Contact Callout in Contact Section -->
+        <div style="margin-bottom: 30px;">
+            <span style="font-size: 1.1rem; color: var(--gold-light); display: block; margin-bottom: 15px;">
+                Direct Phone / Text: <strong>(480) 269-2272</strong>
+            </span>
+            <div class="action-buttons-grid">
+                <a href="tel:4802692272" class="btn-action-gold">Call (480) 269-2272</a>
+                <a href="sms:4802692272" class="btn-action-silver">Text (480) 269-2272</a>
+                <a href="mailto:All4aim@hotmail.com?subject=XELONCE.COM%20Inquiry" class="btn-action-silver">Email All4aim@hotmail.com</a>
+            </div>
         </div>
 
         <form class="form-container" onsubmit="sendDirectEmail(event)">
@@ -594,13 +619,8 @@
             <input type="email" id="clientEmail" class="form-input" placeholder="Your Email Address" required>
             <input type="text" id="companyName" class="form-input" placeholder="Company / Organization Name">
             <textarea id="briefingDetails" class="form-textarea" placeholder="Outline your vision, timeline, and objective..." required></textarea>
-            <button type="submit" class="btn-gold" style="width:100%;">Submit Briefing Request</button>
+            <button type="submit" class="btn-action-gold" style="width:100%;">Submit Briefing via Email</button>
         </form>
-
-        <div style="margin-top: 25px;">
-            <p style="font-size:0.85rem; color:var(--silver-muted);">Or email us directly at:</p>
-            <a href="mailto:All4aim@hotmail.com?subject=XELONCE.COM%20Inquiry" class="direct-email-link">All4aim@hotmail.com</a>
-        </div>
     </section>
 
     <!-- Footer -->
@@ -657,7 +677,7 @@
                 <div class="service-info">
                     <h3>${data.title}</h3>
                     <p>${data.desc}</p>
-                    <a href="#contact" class="btn-gold">Request Scope</a>
+                    <a href="tel:4802692272" class="btn-action-gold">Call To Discuss Scope</a>
                 </div>
                 <div>
                     <ul class="service-list">
@@ -688,7 +708,6 @@
             }
         }
 
-        // Direct Email Routing Script
         function sendDirectEmail(e) {
             e.preventDefault();
             const name = document.getElementById('clientName').value;
