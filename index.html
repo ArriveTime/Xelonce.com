@@ -3,29 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XELONCE | Marketing, Events & Public Relations</title>
+    <title>XELONCE.COM | Marketing, Events & Public Relations</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         :root {
             --bg-dark: #070708;
             --bg-card: #0F0F13;
-            --bg-card-hover: #16161C;
             --gold-primary: #D4AF37;
             --gold-light: #F3E5AB;
-            --gold-dark: #996515;
             --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
             --silver-primary: #E2E8F0;
             --silver-muted: #94A3B8;
-            --silver-gradient: linear-gradient(135deg, #E2E8F0 0%, #FFFFFF 50%, #94A3B8 100%);
             --border-gold: rgba(212, 175, 55, 0.25);
             --border-silver: rgba(226, 232, 240, 0.15);
             --font-heading: 'Cinzel', serif;
-            --font-cursive: 'Great Vibes', cursive;
             --font-body: 'Montserrat', sans-serif;
         }
 
@@ -47,15 +43,10 @@
                 radial-gradient(circle at 85% 70%, rgba(226, 232, 240, 0.03) 0%, transparent 40%);
         }
 
-        /* Typography Helpers */
         .gold-text {
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-
-        .silver-text {
-            color: var(--silver-primary);
         }
 
         /* Navigation */
@@ -72,7 +63,6 @@
             background: rgba(7, 7, 8, 0.85);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-gold);
-            transition: all 0.3s ease;
         }
 
         .logo {
@@ -81,16 +71,6 @@
             font-weight: 800;
             letter-spacing: 4px;
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .logo span.domain {
-            font-size: 0.9rem;
-            color: var(--silver-muted);
-            letter-spacing: 1px;
-            font-weight: 300;
         }
 
         .nav-links {
@@ -167,29 +147,29 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            position: relative;
         }
 
         .hero-title {
             font-family: var(--font-heading);
-            font-size: 3.5rem;
-            font-weight: 700;
+            font-size: 3.8rem;
+            font-weight: 800;
             letter-spacing: 6px;
             margin-bottom: 25px;
             text-transform: uppercase;
         }
 
-        /* Cursive Half-Sized Headline Requirements */
-        .cursive-subtitles {
-            font-family: var(--font-cursive);
-            font-size: 1.8rem;
-            line-height: 1.4;
-            color: var(--gold-light);
+        /* Clear, Readable Regular Subtitles */
+        .subtitles-container {
+            font-family: var(--font-body);
+            font-size: 1.15rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            line-height: 1.8;
             margin-bottom: 30px;
-            font-weight: 400;
+            text-transform: uppercase;
         }
 
-        .cursive-subtitles span {
+        .subtitles-container span {
             display: block;
             background: var(--gold-gradient);
             -webkit-background-clip: text;
@@ -212,7 +192,7 @@
             justify-content: center;
         }
 
-        /* Value Badges */
+        /* Value Grid */
         .value-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -233,7 +213,6 @@
         .value-card:hover {
             border-color: var(--gold-primary);
             transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
         }
 
         .value-title {
@@ -351,7 +330,7 @@
             font-size: 0.7rem;
         }
 
-        /* Scope Calculator Section */
+        /* Calculator Section */
         .calculator-section {
             padding: 100px 8%;
             background: var(--bg-dark);
@@ -421,7 +400,7 @@
             color: var(--gold-primary);
         }
 
-        /* Contact Modal / Section */
+        /* Contact Section */
         .contact-section {
             padding: 100px 8%;
             background: #0A0A0E;
@@ -458,6 +437,21 @@
             resize: vertical;
         }
 
+        .direct-email-link {
+            color: var(--gold-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-top: 15px;
+            transition: color 0.3s;
+        }
+
+        .direct-email-link:hover {
+            color: var(--gold-light);
+            text-decoration: underline;
+        }
+
         /* Footer */
         footer {
             padding: 40px 8%;
@@ -473,8 +467,8 @@
         }
 
         @media (max-width: 768px) {
-            .hero-title { font-size: 2.2rem; }
-            .cursive-subtitles { font-size: 1.4rem; }
+            .hero-title { font-size: 2.4rem; }
+            .subtitles-container { font-size: 0.95rem; }
             .service-display { grid-template-columns: 1fr; }
             .nav-links { display: none; }
         }
@@ -484,7 +478,7 @@
 
     <!-- Navigation -->
     <nav>
-        <a href="#" class="logo gold-text">XELONCE <span class="domain">.COM</span></a>
+        <a href="#" class="logo gold-text">XELONCE.COM</a>
         <ul class="nav-links">
             <li><a href="#services">Services</a></li>
             <li><a href="#estimator">Scope Calculator</a></li>
@@ -495,13 +489,13 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1 class="hero-title gold-text">XELONCE</h1>
+        <h1 class="hero-title gold-text">XELONCE.COM</h1>
         
-        <!-- Cursive Half-Sized Subtitles (3 Separate Lines) -->
-        <div class="cursive-subtitles">
-            <span>Elite Marketing.</span>
-            <span>Unforgettable Events.</span>
-            <span>Strategic Public Relations.</span>
+        <!-- Clean, Regular Text Subtitles (3 Separate Lines) -->
+        <div class="subtitles-container">
+            <span>ELITE MARKETING.</span>
+            <span>UNFORGETTABLE EVENTS.</span>
+            <span>STRATEGIC PUBLIC RELATIONS.</span>
         </div>
 
         <p class="hero-description">
@@ -513,7 +507,7 @@
             <a href="#estimator" class="btn-outline">Build Event / PR Scope</a>
         </div>
 
-        <!-- Value Badges -->
+        <!-- Value Grid -->
         <div class="value-grid">
             <div class="value-card">
                 <div class="value-title">Boutique Agility</div>
@@ -548,7 +542,7 @@
         </div>
 
         <div class="service-display" id="service-content">
-            <!-- Dynamically Populated by JS -->
+            <!-- Populated by JS -->
         </div>
     </section>
 
@@ -580,7 +574,7 @@
 
             <div class="calc-output">
                 <div>
-                    <div style="font-size:0.8rem; color:var(--silver-muted); uppercase; letter-spacing:1px;">Recommended Tier</div>
+                    <div style="font-size:0.8rem; color:var(--silver-muted); text-transform:uppercase; letter-spacing:1px;">Recommended Tier</div>
                     <div class="tier-display" id="tier-result">Bespoke Executive Engagement</div>
                 </div>
                 <a href="#contact" class="btn-gold">Lock In Briefing</a>
@@ -588,29 +582,34 @@
         </div>
     </section>
 
-    <!-- Contact & Consultation Section -->
+    <!-- Contact & Direct Email Section -->
     <section class="contact-section" id="contact">
         <div class="section-header">
             <div class="section-subtitle">Private Consultation</div>
             <h2 class="section-title gold-text">INITIATE A BRIEFING</h2>
         </div>
 
-        <form class="form-container" onsubmit="handleForm(event)">
-            <input type="text" class="form-input" placeholder="Full Name or Executive Representative" required>
-            <input type="email" class="form-input" placeholder="Corporate / Executive Email" required>
-            <input type="text" class="form-input" placeholder="Company / Organization Name">
-            <textarea class="form-textarea" placeholder="Outline your vision, timeline, and objective..." required></textarea>
+        <form class="form-container" onsubmit="sendDirectEmail(event)">
+            <input type="text" id="clientName" class="form-input" placeholder="Full Name or Executive Representative" required>
+            <input type="email" id="clientEmail" class="form-input" placeholder="Your Email Address" required>
+            <input type="text" id="companyName" class="form-input" placeholder="Company / Organization Name">
+            <textarea id="briefingDetails" class="form-textarea" placeholder="Outline your vision, timeline, and objective..." required></textarea>
             <button type="submit" class="btn-gold" style="width:100%;">Submit Briefing Request</button>
         </form>
+
+        <div style="margin-top: 25px;">
+            <p style="font-size:0.85rem; color:var(--silver-muted);">Or email us directly at:</p>
+            <a href="mailto:All4aim@hotmail.com?subject=XELONCE.COM%20Inquiry" class="direct-email-link">All4aim@hotmail.com</a>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div>&copy; 2026 XELONCE (XELONCE.COM). All Rights Reserved.</div>
+        <div>&copy; 2026 XELONCE.COM. All Rights Reserved.</div>
         <div style="letter-spacing:1px; color:var(--gold-primary);">EXCELLENCE EXECUTED.</div>
     </footer>
 
-    <!-- JavaScript Interactions -->
+    <!-- JavaScript -->
     <script>
         const servicesData = {
             events: {
@@ -689,10 +688,23 @@
             }
         }
 
-        function handleForm(e) {
+        // Direct Email Routing Script
+        function sendDirectEmail(e) {
             e.preventDefault();
-            alert("Thank you for reaching out to XELONCE. Your briefing request has been received. Our team will contact you shortly.");
-            e.target.reset();
+            const name = document.getElementById('clientName').value;
+            const email = document.getElementById('clientEmail').value;
+            const company = document.getElementById('companyName').value;
+            const details = document.getElementById('briefingDetails').value;
+
+            const subject = encodeURIComponent(`XELONCE.COM Inquiry from ${name} (${company || 'Individual'})`);
+            const body = encodeURIComponent(
+                `Name: ${name}\n` +
+                `Email: ${email}\n` +
+                `Company: ${company || 'N/A'}\n\n` +
+                `Briefing Details:\n${details}`
+            );
+
+            window.location.href = `mailto:All4aim@hotmail.com?subject=${subject}&body=${body}`;
         }
 
         // Initial Load
